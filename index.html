@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InspoBoard - Daily Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header class="header">
+      <h1 id="greeting">Good Morning, Stan 👋</h1>
+      <p id="current-time">Loading time...</p>
+    </header>
+
+    <section class="cards-grid">
+      <div class="card quote-card">
+        <h2><i class="fas fa-quote-left"></i> Quote of the Day</h2>
+        <blockquote id="quote">Loading...</blockquote>
+        <small id="quote-author"></small>
+        <button id="refresh-quote" title="New Quote"><i class="fas fa-sync"></i></button>
+      </div>
+
+      <div class="card verse-card">
+        <h2><i class="fas fa-book"></i> Bible Verse</h2>
+        <blockquote id="verse">Loading...</blockquote>
+        <small id="verse-ref"></small>
+        <button id="refresh-verse" title="New Verse"><i class="fas fa-sync"></i></button>
+      </div>
+
+      <div class="card weather-card">
+        <h2><i class="fas fa-cloud-sun"></i> Weather</h2>
+        <div class="weather-info">
+          <p id="location">Locating...</p>
+          <p id="temperature"></p>
+          <p id="weather-description"></p>
+          <img id="weather-icon" alt="Weather Icon" />
+        </div>
+      </div>
+
+      <div class="card todo-card">
+        <h2><i class="fas fa-tasks"></i> To-Do List</h2>
+        <div class="todo-input">
+          <input type="text" id="new-task" placeholder="What needs to be done?" />
+          <button id="add-task">Add</button>
+        </div>
+        <ul id="task-list"></ul>
+        <div class="task-footer">
+          <span id="task-count">0 tasks</span>
+          <button id="clear-completed">Clear Completed</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Priceless Tech InspoBoard</p>
+      <button id="theme-toggle"><i class="fas fa-moon"></i> Theme</button>
+    </footer>
+
+    <script src="function.js"></script>
+</body>
+</html>
